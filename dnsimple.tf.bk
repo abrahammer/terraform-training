@@ -1,0 +1,10 @@
+provider "dnsimple" {
+token="ShowMeTheMoney"
+email="tom@abraham.com"
+}
+resource "dnsimple_record" "record"{
+domain="terraform.rocks"
+type="A"
+name="testrecord"
+value="${aws_instance.web.0.public_ip}"
+}
