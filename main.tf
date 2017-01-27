@@ -51,7 +51,7 @@ resource "aws_instance" "web" {
   tags {
     Identity    = "autodesk-anaconda"
     adskservice = "snow"
-    tomtag      = "yeah"
+    tomtag      = "editone"
     Name        = "web ${count.index+1}/${var.num_webs}"
   }
 }
